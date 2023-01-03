@@ -1,0 +1,6 @@
+<div class="row">
+  <div class="col">
+    <fx-single-spot-price *ngFor="let spotPrice of spots | async; let i = index; trackBy: trackPrice" [spot]="spotPrice" [delay]="i" ></fx-single-spot-price>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<mat-card class="spot-price">
+  <mat-card-header>
+    <mat-card-title>{{spot?.instrumentName | displaySpotName}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="col-2">{{spot?.id}}</div>
+      <div class="col-3">{{spot?.ask}}</div>
+      <div class="col-3">{{spot?.bid}}</div>
+      <div class="col-4">{{spot?.timestamp | date: 'yyyy-mm-dd:hh:mm:ss'}}</div>
+    </div>
+  </mat-card-content>
+</mat-card>

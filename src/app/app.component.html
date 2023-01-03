@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    class="fx-icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item
+            routerLink="/spot-prices">
+      <mat-icon>price_check</mat-icon>
+      <span>Spot prices</span>
+    </button>
+    <button mat-menu-item
+            routerLink="/about">
+      <mat-icon>person_filled</mat-icon>
+      <span>About author</span>
+    </button>
+  </mat-menu>
+  <span class="text-uppercase">Fx spot prices</span>
+  <span class="fx-toolbar-spacer"></span>
+  <button
+    mat-icon-button
+    routerLink="/about"
+    matTooltip="About author"
+    class="fx-icon favorite-icon"
+    aria-label="About author">
+    <mat-icon>person_filled</mat-icon>
+  </button>
+  <a
+    matTooltip="Przemysław Michałek linkedin profile"
+    mat-icon-button
+    class="mat-button"
+    aria-label="social link"
+    [attr.href]="'https://www.linkedin.com/in/przemys%C5%82aw-micha%C5%82ek-48438a126/'"
+    [attr.target]="'blank'">
+    <mat-icon>share</mat-icon>
+  </a>
+</mat-toolbar>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+<fx-error></fx-error>
